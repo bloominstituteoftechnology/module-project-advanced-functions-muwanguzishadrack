@@ -106,7 +106,19 @@
       // ❗ Notes:
       // 🧠 Solve this challenge using the forEach method of the learners array.
       // 🧠 You will need to declare a result array into which you push learners from inside your forEach loop.
-      const getJavaScriptLoversForEach = () => {};
+      const getJavaScriptLoversForEach = (learners) => {
+        let result = [];
+
+        learners.forEach((learner) => {
+          if (learner.lovesJS) {
+            result.push(learner);
+          }
+        });
+        if (!result.length) {
+          return "no JS lovers here!";
+        }
+        return result;
+      };
 
       // 👉 CHALLENGE 6
       // 🧠 The function getJavaScriptLoversFilter takes an array of learner objects and returns an array or a string.
