@@ -63,24 +63,22 @@
         return learners;
       };
 
-      // const processLearnersLoop = (learner) => {
-      //   learner.forEach((student) => {
-      //     if (student.lovesJS === 0) {
-      //       student.lovesJS = false;
-      //     } else if (student.lovesJS === 1) {
-      //       student.lovesJS = true;
-      //     }
-      //   });
-      //   return learner;
-      // };
-
       // 👉 CHALLENGE 3
       // 🧠 The function processLearnerForEach takes an array of learner objects as its argument, and returns it after some modifications.
       // 🧠 It is an alternate implementation of the function processLearnersLoop above.
       // ❗ Notes:
       // 🧠 Solve this challenge using the forEach method of the learners array.
       // 🧠 Use arrow functions whenever possible.
-      const processLearnerForEach = () => {};
+      const processLearnerForEach = (learners) => {
+        learners.forEach((learner) => {
+          if (learner.lovesJS === 0) {
+            learner.lovesJS = false;
+          } else if (learner.lovesJS === 1) {
+            learner.lovesJS = true;
+          }
+        });
+        return learners;
+      };
 
       // 👉 CHALLENGE 4
       // 🧠 The function processLearnerMap takes an array of learner objects as its argument, and returns a new array.
