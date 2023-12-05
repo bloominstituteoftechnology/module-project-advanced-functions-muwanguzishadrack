@@ -150,7 +150,17 @@
       // ❗ Notes:
       // 🧠 This could be solved by using filter to make an array of odd integers, and then using forEach to add them up.
       // 🧠 Or you could opt for solving everything with a single forEach which is the recommended approach (saves a loop).
-      const sumOddInts = () => {};
+      const sumOddInts = (ints) => {
+        let oddNums = [];
+        let sum = 0;
+        ints.forEach((int) => {
+          if (int % 2 !== 0) {
+            oddNums.push(int);
+            sum += int;
+          }
+        });
+        return [sum, oddNums];
+      };
 
       // 👉 CHALLENGE 8
       // 🧠 The function checkInts takes any number of arguments, but each argument is an integer.
