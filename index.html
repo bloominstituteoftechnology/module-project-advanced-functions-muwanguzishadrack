@@ -50,7 +50,29 @@
       // ❗ Notes:
       // 🧠 There are many approaches to this problem: using a loop, using forEach, using map...
       // 🧠 Solve this challenge using a for/in loop or a for loop.
-      const processLearnersLoop = () => {};
+
+      const processLearnersLoop = (learners) => {
+        for (let index in learners) {
+          const learner = learners[index];
+          if (learner.lovesJS === 0) {
+            learner.lovesJS = false;
+          } else if (learner.lovesJS === 1) {
+            learner.lovesJS = true;
+          }
+        }
+        return learners;
+      };
+
+      // const processLearnersLoop = (learner) => {
+      //   learner.forEach((student) => {
+      //     if (student.lovesJS === 0) {
+      //       student.lovesJS = false;
+      //     } else if (student.lovesJS === 1) {
+      //       student.lovesJS = true;
+      //     }
+      //   });
+      //   return learner;
+      // };
 
       // 👉 CHALLENGE 3
       // 🧠 The function processLearnerForEach takes an array of learner objects as its argument, and returns it after some modifications.
