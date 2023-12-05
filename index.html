@@ -31,7 +31,14 @@
       // 🧠 Examples of usage:
       // processSingleLearner({ name: "Elisabeth", lovesJS: 1 }) // should return { name: "Elisabeth", lovesJS: true }
       // processSingleLearner({ name: "Pete", age: 23, lovesJS: 0 }) // should return { name: "Pete", age: 23, lovesJS: false }
-      const processSingleLearner = () => {};
+      const processSingleLearner = (learner) => {
+        if (learner.lovesJS === 0) {
+          learner.lovesJS = false;
+        } else if (learner.lovesJS === 1) {
+          learner.lovesJS = true;
+        }
+        return learner;
+      };
 
       // 👉 CHALLENGE 2
       // 🧠 The function processLearnerLoop takes an array of learner objects as its argument, and returns it after some modifications.
