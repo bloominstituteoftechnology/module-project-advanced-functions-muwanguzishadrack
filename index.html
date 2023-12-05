@@ -86,7 +86,17 @@
       // ❗ Notes:
       // 🧠 Solve this challenge using the map method of the learners array.
       // 🧠 Use arrow functions.
-      const processLearnerMap = () => {};
+      const processLearnerMap = (learners) => {
+        const newLearners = learners.map((learner) => {
+          if (learner.lovesJS === 0) {
+            learner.lovesJS = false;
+          } else if (learner.lovesJS === 1) {
+            learner.lovesJS = true;
+          }
+          return learner;
+        });
+        return newLearners;
+      };
 
       // 👉 CHALLENGE 5
       // 🧠 The function getJavaScriptLoversForEach takes an array of learner objects and returns an array or a string.
